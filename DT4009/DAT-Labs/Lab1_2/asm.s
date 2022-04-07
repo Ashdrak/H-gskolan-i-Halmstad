@@ -18,6 +18,7 @@ CMP0 CMP R1, # 9 ; compare (R2)
      BNE ADD0 ; different> jump to ADD0
      MOV R1, # 0 ; (R1) <0
      ADD R0, R0, # 13 ; increment (R0) by 13
+     ADD R2, R2, # 13 ; increment (R2) by 1
      B LOP2 ; jump to LOP2
 ADD0 ADD R0, R0, # 1 ; update first: (R0) <(R0) + 1
      ADD R1, R1, # 1 ; update first: (R1) <(R1) + 1
