@@ -7,7 +7,7 @@ main
      LDR R4, =Vector                  ; Load our vector into R4
      LDR R6, [R4]                     ; first element of vector
      LDR R7, [R4]                     ; first element of vector
-     MOV R8, #0                       ; first element of vector
+     MOV R8, #0                       ; set R8 to 0
      
      ; counter
      MOV R2, #0                       ; set R2 to 0
@@ -24,12 +24,12 @@ VESI LDR R11, [R4,R3,LSL #2]          ; vector[i]
      
      ;loop max value
 LOOP CMP R2,R3                        ; if R2 = R3 lOOP stops
-     BGE CON1                         ; Jump to CON1
+     BEQ CON1                         ; Jump to CON1
      LDR R0, [R4,R2,LSL #2]           ; vector[i]
      CMP R0, R7                       ; if R0 bigger then R6 jump to FMAX
      BHI FMAX                         ; Jump to FMAX
      ADD R2, R2, #1                   ; increase our counter with 1
-     B LOOP                           ;Jump to Loop
+     B LOOP                           ; Jump to Loop
 FMAX MOV R7, R0                       ; adds our current Max to R7
      ADD R2, R2, #1                   ; increase our counter with 1
      B LOOP                           ; Jump to LOOP
@@ -37,20 +37,20 @@ FMAX MOV R7, R0                       ; adds our current Max to R7
      ;Loop min value
 CON1 MOV R2, #0                       ; Rest our counter
 LOP2 CMP R2,R3                        ; if R2 = R3 CON1 stops
-     BGE CON2                         ; Jump to  CON2
-     LDR R5, [R4,R2,LSL #2]           ; vector[i]
-     CMP R5, R6                       ; if R5 is smaller then R6 jump to FMIN
-     BLT FMIN                         ; Jump to FMIN
+     BEQ CON2                         ; Jump to  CON2
+     LDR R0, [R4,R2,LSL #2]           ; vector[i]
+     CMP R0, R6                       ; if R5 is smaller then R6 jump to FMIN
+     BLO FMIN                         ; Jump to FMIN
      ADD R2, R2, #1                   ; increase our counter with 1
      B LOP2                           ; Jump to LOP2
-FMIN MOV R6, R5                       ; adds our current min to R6
+FMIN MOV R6, R0                       ; adds our current min to R6
      ADD R2, R2, #1                   ; increase our counter with 1
      B LOP2                           ; Jump LOP2
      
      ;Average Value
 CON2 MOV R2, #0                       ; reset our counter
 LOP3 CMP R2,R3                        ; if R2 = R3 lOP3 stops
-     BGE DIVI                         ;Jump DIVI
+     BEQ DIVI                         ; Jump DIVI
      LDR R0, [R4,R2,LSL #2]           ; vector[i]
      ADD R8, R8, R0                   ; Add togheter the vectors elements 
      ADD R2, R2, #1                   ; increase our counter with 1
