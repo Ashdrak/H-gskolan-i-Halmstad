@@ -36,8 +36,8 @@ public class MyArrayList<T> implements Iterable<T>{
 
     public boolean contains(T t){
         for(int i = 0; i < myList.length; i++){
-            myList[i] = t;
-            return true;
+            if(myList[i] == t)
+                return true;
         }
         return false;
     }
