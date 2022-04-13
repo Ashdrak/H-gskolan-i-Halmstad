@@ -1,4 +1,3 @@
-
 public class Test {
     public static void main(String[] args) {
         DoublyLinkedList<Integer> test1 = new DoublyLinkedList<>();
@@ -19,7 +18,7 @@ public class Test {
         System.out.println(test1); */
         test1.addAtFirstSmaller(1);
         test1.addAtFirstSmaller(2);
+        test1.addAtFirstSmaller(3);
         System.out.println(test1);
-
     }
 }

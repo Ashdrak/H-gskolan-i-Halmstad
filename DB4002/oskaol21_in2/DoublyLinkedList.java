@@ -261,7 +261,7 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T> {
         
         for(int i = 0; i < size; i++) {         //letar igenom listans noder
             if (tNode.value.compareTo(t) == -1) { //-1 betyder att vi letar efter ett mindre tal
-                add(size -1, t);                //säger vilket index vi skall stoppa in add på
+                add(size - i, t);                //säger vilket index vi skall stoppa in add på
                 return;
             } 
 

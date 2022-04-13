@@ -14,7 +14,16 @@
             "sourcePath": ["${workspaceRoot}"],   // Indicates where your source (.java) files are
             "classpath": ["${workspaceRoot}"],    // Indicates the location of your .class files
             "options": [],                             // Additional options to pass to the java executable
-            "args": []                                // Command line arguments to pass to the startup class
+            "args": [],                                // Command line arguments to pass to the startup class
+            "stepFilters": {
+                "skipClasses": [
+                    "$JDK",
+                    "junit.*"
+                ],
+                "skipSynthetics": false,
+                "skipStaticInitializers": false,
+                "skipConstructors": false
+            }
         }
 
     ],
