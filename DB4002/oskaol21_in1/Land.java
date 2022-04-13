@@ -4,25 +4,24 @@ public class Land implements Comparable<Land>{
 
     String name;
     String capital;
-    int amountOfCitizens;
+    int citizens;
 
-    Land(String name, String capital, int amountOfCitizens){
+    Land(String name, String capital, int citizens){
         this.name = name;
         this.capital = capital;
-        this.amountOfCitizens = amountOfCitizens;
+        this.citizens = citizens;
     }
 
     public String toString() {
-        String string = "Capital:" + this.capital + ", Name:" + this.name + ", Amount" + " of" + 
-        " citizens:" + this.amountOfCitizens;
+        String string = "Capital:" + this.capital + ", Name:" + this.name + " Citizens:" + this.citizens;
         return string;
     }
 
     public int compareTo(Land land) {
-        if(this.amountOfCitizens < land.amountOfCitizens) 
+        if(this.citizens < land.citizens) 
         return -1;
 
-        else if(this.amountOfCitizens == land.amountOfCitizens)
+        else if(this.citizens == land.citizens)
         return 0;
 
         else return 1;
@@ -52,11 +51,11 @@ class LandCapital implements Comparator<Land>{
 
 class LandCitizens implements Comparator<Land>{
     public int compare(Land land1, Land land2){
-        if (land1.amountOfCitizens > land2.amountOfCitizens){
+        if (land1.citizens > land2.citizens){
             return 1;
         }
 
-        else if (land1.amountOfCitizens == land2.amountOfCitizens){
+        else if (land1.citizens == land2.citizens){
             return 0;
         }
         return -1;
