@@ -96,9 +96,9 @@ public class DoublyLinkedList_test {
         list1.addAtFirstSmaller(1);
         assertEquals(1, (Object) list1.get(0));
         list1.addAtFirstSmaller(2);
-        list1.addAtFirstSmaller(3);
+        //list1.addAtFirstSmaller(3);
         System.out.println(list1);
-        assertEquals(3, (Object) list1.get(2));
+        assertEquals(2, (Object) list1.get(1));
     }
 
     @Test                                               

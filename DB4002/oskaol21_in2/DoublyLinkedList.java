@@ -14,15 +14,15 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T> {
 
     public void add(T t) {
         if (isEmpty()) {
-            head = new ListNode<T>(t);// skapar en nya nod som head pekar på
-            tail = head;
+            head = new ListNode<T>(t);// skapar en nya nod som head pekar på head
+            tail = head;              // tail blir vårt gammla head
             size++;
-        } else {
+        } else {                       // stpååar in alla våran noder i den temporära listan
             ListNode<T> tNode = head;
             while (tNode.next != null) {
                 tNode = tNode.next;
             }
-            tNode.next = new ListNode<T>(t, tNode, null);
+            tNode.next = new ListNode<T>(t, tNode, null); //skapar en ny nod som vi gör till tail
             tail = tNode.next;
             size++;
         }
@@ -50,6 +50,7 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T> {
             tNode = tNode.next;
 
         tNode.next = new ListNode<T>(t, tNode, tNode.next);
+        tNode.next.next.prev = tNode.next;
         size++;
     }
 
@@ -231,6 +232,7 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T> {
         return string;
     }
 
+    // uppgift 2b
     public void reverse() {  // stoppar listan i stackena och vänder på den
         if (isEmpty()) // är index tomt
             return;
@@ -248,8 +250,55 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T> {
         }
     }
 
-        public void addAtFirstSmaller(T t) {
-            
+    // uppgift 3a
+    public void addAtFirstSmaller(T t) { //börja bakifrån och leta efter första noden med mindre värde än t. sätt in te bakom den noden
+        ListNode<T> tNode = tail;
+
+        if (isEmpty()) { //är listan tom adda t
+            add(t);
+            return;
         }
+        
+        for(int i = 0; i < size; i++) {         //letar igenom listans noder
+            if (tNode.value.compareTo(t) == -1) { //-1 betyder att vi letar efter ett mindre tal
+                add(size -1, t);                //säger vilket index vi skall stoppa in add på
+                return;
+            } 
+
+            if (tNode.prev == null) { // om vi går hela vägen tail till null så stoppar vi in t på index 0
+                add(0, t);
+                return;
+            }
+            tNode = tNode.prev;  //skiftar igenom noderna
+        }
+    }
+
+    public void printNode(int index) {
+        
+        ListNode<T> node = head;
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+        }
+
+        String str_prev;
+        String str_next;
+
+        try {
+			str_prev = String.valueOf(node.prev.value);
+		}
+		catch(NullPointerException e) {
+			str_prev = "null";
+		}
+
+        try {
+			str_next = String.valueOf(node.next.value);
+		}
+		catch(NullPointerException e) {
+			str_next = "null";
+		}
+
+        System.out.println("" + str_prev + " | " + node.value + " | " + str_next);
+        return;
+    }
 
 }
