@@ -2,7 +2,7 @@ import java.util.Iterator;
 
 public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T> {
 
-    public ListNode<T> head;
+    ListNode<T> head;
     ListNode<T> tail;
     int size;
 
@@ -230,5 +230,26 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T> {
         string += ")";
         return string;
     }
+
+    public void reverse() {  // stoppar listan i stackena och vänder på den
+        if (isEmpty()) // är index tomt
+            return;
+
+        MyStack<T> stack = new MyStack<T>();
+
+        for (T t: this) { //stoppar alla noder i stacken 
+            stack.push(t);
+        }
+
+        int SizeStack = size;
+        this.clear();           //tömmer listan
+        for (int i = 0; i < SizeStack; i++) { //stoppar tillbaka alla noder i omvänd ordning
+            add(stack.pop());
+        }
+    }
+
+        public void addAtFirstSmaller(T t) {
+            
+        }
 
 }

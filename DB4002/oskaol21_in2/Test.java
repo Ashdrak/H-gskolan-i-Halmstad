@@ -14,7 +14,7 @@ public class Test {
         test1.add(9);
         test1.add(10);
         System.out.println(test1);
-        test1.remove(2);
+        test1.reverse();
         System.out.println(test1);
     }
 }

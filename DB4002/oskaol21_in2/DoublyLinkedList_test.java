@@ -80,7 +80,7 @@ public class DoublyLinkedList_test {
         assertEquals(4, (Object) list1.get(4));
     }
 
-    /*@Test                                               
+    @Test                                               
     public void addAtFirstSmaller_at_index_zero() {
         list1.add(4);
         list1.add(2);
@@ -89,9 +89,9 @@ public class DoublyLinkedList_test {
         list1.addAtFirstSmaller(1);
         System.out.println(list1);
         assertEquals(1, (Object) list1.get(0));
-    }*/
+    }
 
-    /*@Test                                               
+    @Test                                               
     public void addAtFirstSmaller_in_empty_list() {
         list1.addAtFirstSmaller(1);
         assertEquals(1, (Object) list1.get(0));
@@ -99,7 +99,7 @@ public class DoublyLinkedList_test {
         list1.addAtFirstSmaller(3);
         System.out.println(list1);
         assertEquals(3, (Object) list1.get(2));
-    }*/
+    }
 
     @Test                                               
     public void get_should_return_node_value_at_index() {
