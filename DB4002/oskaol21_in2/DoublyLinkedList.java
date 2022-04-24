@@ -12,7 +12,25 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T> {
         size = 0;
     }
 
+    public void checkIfNull(Object value) { //kollar så att man inte försöker stoppa in null
+
+        if (value == null) {
+            throw new NullPointerException("Null is not allowed!");
+        }
+        return;
+    }
+
+    public void checkIfNegative(int value) { //kollar så att man inte försöker stoppa in negativa nummer
+
+        if (value < 0) {
+            throw new IllegalArgumentException("Negative values is not allowed!");
+        }
+        return;
+    }
+
     public void add(T t) {
+        checkIfNull(t);
+
         if (isEmpty()) {
             head = new ListNode<T>(t);// skapar en nya nod som head pekar på head
             tail = head;              // tail blir vårt gammla head
@@ -29,6 +47,8 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T> {
     }
 
     public void add(int index, T t) {
+        checkIfNegative(index);
+
         if (index < 0) { // när index är out of bounds skicka meddelande
             throw new IndexOutOfBoundsException(
                     "The provided index(int index, T t) is not allowed.");
@@ -55,6 +75,8 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T> {
     }
 
     public T get(int index) {
+        checkIfNegative(index);
+
         if (isEmpty()) // är index tomt
             return null;
 
@@ -80,6 +102,8 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T> {
     }
 
     public int remove(T t) { // tar bort alla förekomster av t returnar alla t som tas bort annas t
+        checkIfNull(t);
+        
         if (isEmpty())
             return 0;
 
@@ -95,7 +119,7 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T> {
         ListNode<T> tNode3 = tNode2.next;
 
         while (tNode3 != null) {
-            if (tNode2.value.equals(t)) { // pixar lampan tar bort i:et
+            if (tNode2.value.equals(t)) { 
                 tNode1.next = tNode3; // men vi särar konektionen mellan mitten noden utav 3 noder
                 tNode3.prev = tNode1; // och ersätter mitten noden med den 3:e noden och knyter
                                       // ihop dom med den första och 3.next nod
@@ -118,6 +142,8 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T> {
     }
 
     public T remove(int index) {          //tar bort värdet på index och returnerar det
+        checkIfNegative(index);
+
         if (isEmpty())
             return null;
 
@@ -252,6 +278,8 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T> {
 
     // uppgift 3a
     public void addAtFirstSmaller(T t) { //börja bakifrån och leta efter första noden med mindre värde än t. sätt in te bakom den noden
+        checkIfNull(t);
+        
         ListNode<T> tNode = tail;
 
         if (isEmpty()) { //är listan tom adda t
@@ -260,7 +288,7 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T> {
         }
         
         for(int i = 0; i < size; i++) {         //letar igenom listans noder
-            if (tNode.value.compareTo(t) == -1) { //-1 betyder att vi letar efter ett mindre tal
+            if (tNode.value.compareTo(t) <= -1) { //-1 betyder att vi letar efter ett mindre tal
                 add(size - i, t);                //säger vilket index vi skall stoppa in add på
                 return;
             } 
