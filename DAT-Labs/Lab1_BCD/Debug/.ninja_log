@@ -1,0 +1,10 @@
+# ninja log v5
+1	94	6711418087734307	C:/Users/91oso/Documents/DAT-Labs/Lab1_BCD/Debug/Obj/asm.o	e5a532d4bb1ddbb0
+39	118	6711418088169384	C:/Users/91oso/Documents/DAT-Labs/Lab1_BCD/Debug/Obj/startup_sam3x.o	79649675578682c4
+124	226	6711418089299582	C:/Users/91oso/Documents/DAT-Labs/Lab1_BCD/Debug/Exe/Lab1_BCD.out	25acbf792acb1e64
+0	18	6714505446242624	C:/Users/91oso/Documents/DAT-Labs/Lab1_BCD/Debug/Obj/asm.o	e5a532d4bb1ddbb0
+20	56	6714505446597687	C:/Users/91oso/Documents/DAT-Labs/Lab1_BCD/Debug/Exe/Lab1_BCD.out	25acbf792acb1e64
+0	13	6714509178874746	C:/Users/91oso/Documents/DAT-Labs/Lab1_BCD/Debug/Obj/asm.o	e5a532d4bb1ddbb0
+16	51	6714509179224804	C:/Users/91oso/Documents/DAT-Labs/Lab1_BCD/Debug/Exe/Lab1_BCD.out	25acbf792acb1e64
+1	14	6715447535132216	C:/Users/91oso/Documents/DAT-Labs/Lab1_BCD/Debug/Obj/asm.o	e5a532d4bb1ddbb0
+16	49	6715447535457478	C:/Users/91oso/Documents/DAT-Labs/Lab1_BCD/Debug/Exe/Lab1_BCD.out	25acbf792acb1e64
