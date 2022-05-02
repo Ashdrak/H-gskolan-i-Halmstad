@@ -5,56 +5,52 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\asm.s</file>
-            <file>$PROJ_DIR$\Debug\List\Lab2_1.map</file>
-            <file>$TOOLKIT_DIR$\config\linker\Microchip\sam3x8\sram.icf</file>
-            <file>$PROJ_DIR$\Debug\Obj\startup_sam3x.o.rsp</file>
-            <file>$PROJ_DIR$\Debug\Obj\asm.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\asm.o.rsp</file>
-            <file>$PROJ_DIR$\Debug\Exe\Lab2_1.out</file>
             <file>$PROJ_DIR$\Debug\Obj\startup_sam3x.o</file>
-            <file>$PROJ_DIR$\..\Lab_Test\asm.s</file>
-            <file>$PROJ_DIR$\..\Lab1_2\asm.s</file>
+            <file>$PROJ_DIR$\Debug\Obj\startup_sam3x.o.rsp</file>
+            <file>$PROJ_DIR$\Debug\Exe\Lab2_1.out</file>
+            <file>$PROJ_DIR$\Debug\List\Lab2_1.map</file>
+            <file>$PROJ_DIR$\Debug\Obj\asm.o.rsp</file>
+            <file>$TOOLKIT_DIR$\config\linker\Microchip\sam3x8\sram.icf</file>
+            <file>$PROJ_DIR$\asm.s</file>
             <file>$PROJ_DIR$\..\startup_sam3x.s</file>
-            <file>$PROJ_DIR$\..\Lab1_BCD\asm.s</file>
-            <file>$PROJ_DIR$\..\Lab1_3\asm.s</file>
+            <file>$PROJ_DIR$\Debug\Obj\asm.o</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 6 1</file>
+                    <file> 3 2</file>
                 </tool>
             </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\asm.s</name>
-            <outputs>
-                <tool>
-                    <name>AARM</name>
-                    <file> 4</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>AARM</name>
-                    <file> 5</file>
-                </tool>
-            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\Debug\Exe\Lab2_1.out</name>
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 1</file>
+                    <file> 3</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 2 4 7</file>
+                    <file> 5 8 0</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\asm.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 8</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 4</file>
                 </tool>
             </inputs>
         </file>
@@ -63,13 +59,13 @@
             <outputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 7</file>
+                    <file> 0</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 3</file>
+                    <file> 1</file>
                 </tool>
             </inputs>
         </file>

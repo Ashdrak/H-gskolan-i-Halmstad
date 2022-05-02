@@ -6,42 +6,27 @@
         <name>Debug</name>
         <outputs>
             <file>$PROJ_DIR$\asm.s</file>
-            <file>$PROJ_DIR$\Debug\Obj\asm.o</file>
+            <file>$TOOLKIT_DIR$\config\linker\Microchip\sam3x8\sram.icf</file>
             <file>$PROJ_DIR$\Debug\Obj\startup_sam3x.o</file>
             <file>$PROJ_DIR$\Debug\List\Lab_Test.map</file>
-            <file>$PROJ_DIR$\Debug\Exe\Lab_Test.out</file>
-            <file>$TOOLKIT_DIR$\config\linker\Microchip\sam3x8\sram.icf</file>
-            <file>$PROJ_DIR$\Debug\Obj\startup_sam3x.o.rsp</file>
             <file>$PROJ_DIR$\..\startup_sam3x.s</file>
             <file>$PROJ_DIR$\Debug\Obj\asm.o.rsp</file>
+            <file>$PROJ_DIR$\Debug\Obj\startup_sam3x.o.rsp</file>
+            <file>$PROJ_DIR$\Debug\Obj\asm.o</file>
+            <file>$PROJ_DIR$\Debug\Exe\Lab_Test.out</file>
         </outputs>
         <file>
             <name>$PROJ_DIR$\asm.s</name>
             <outputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 1</file>
+                    <file> 7</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 8</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Debug\Exe\Lab_Test.out</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 3</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 5 1 2</file>
+                    <file> 5</file>
                 </tool>
             </inputs>
         </file>
@@ -61,11 +46,26 @@
             </inputs>
         </file>
         <file>
+            <name>$PROJ_DIR$\Debug\Exe\Lab_Test.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 3</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 1 7 2</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
             <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 3 4</file>
+                    <file> 3 8</file>
                 </tool>
             </outputs>
         </file>

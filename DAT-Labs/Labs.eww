@@ -19,7 +19,13 @@
         <path>$WS_DIR$\Lab2_2\Lab2_2.ewp</path>
     </project>
     <project>
+        <path>$WS_DIR$\Lab2_3\Lab2_3.ewp</path>
+    </project>
+    <project>
         <path>$WS_DIR$\Lab_Test\Lab_Test.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\Test\Test.ewp</path>
     </project>
     <batchBuild />
 </workspace>
