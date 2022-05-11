@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "C:\Users\91oso\Documents\DAT-Labs\Lab1_1\settings\Lab1_1.Debug.general.xcl" --backend -f "C:\Users\91oso\Documents\DAT-Labs\Lab1_1\settings\Lab1_1.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "C:\Users\91oso\Documents\GitHub\H-gskolan-i-Halmstad\DAT-Labs\Lab1_1\settings\Lab1_1.Debug.general.xcl" --backend -f "C:\Users\91oso\Documents\GitHub\H-gskolan-i-Halmstad\DAT-Labs\Lab1_1\settings\Lab1_1.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "C:\Users\91oso\Documents\DAT-Labs\Lab1_1\settings\Lab1_1.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\91oso\Documents\DAT-Labs\Lab1_1\settings\Lab1_1.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "C:\Users\91oso\Documents\GitHub\H-gskolan-i-Halmstad\DAT-Labs\Lab1_1\settings\Lab1_1.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\91oso\Documents\GitHub\H-gskolan-i-Halmstad\DAT-Labs\Lab1_1\settings\Lab1_1.Debug.driver.xcl" 
 
 @echo off 
 :end

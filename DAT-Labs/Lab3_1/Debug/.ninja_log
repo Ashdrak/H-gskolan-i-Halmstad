@@ -1,0 +1,14 @@
+# ninja log v5
+6	36	6739606659194573	C:/Users/91oso/Documents/GitHub/H-gskolan-i-Halmstad/DAT-Labs/Lab3_1/Debug/Obj/startup_sam3x.o	f1f355a6b9f116db
+0	44	6739606659194573	C:/Users/91oso/Documents/GitHub/H-gskolan-i-Halmstad/DAT-Labs/Lab3_1/Debug/Obj/asm.o	60fe65f1d5ddda6a
+54	126	6739606659986111	C:/Users/91oso/Documents/GitHub/H-gskolan-i-Halmstad/DAT-Labs/Lab3_1/Debug/Exe/Lab3_1.out	e8d320b40fd21c82
+0	12	6739609361404803	C:/Users/91oso/Documents/GitHub/H-gskolan-i-Halmstad/DAT-Labs/Lab3_1/Debug/Obj/asm.o	60fe65f1d5ddda6a
+14	43	6739609361699854	C:/Users/91oso/Documents/GitHub/H-gskolan-i-Halmstad/DAT-Labs/Lab3_1/Debug/Exe/Lab3_1.out	e8d320b40fd21c82
+0	12	6739611975075308	C:/Users/91oso/Documents/GitHub/H-gskolan-i-Halmstad/DAT-Labs/Lab3_1/Debug/Obj/asm.o	60fe65f1d5ddda6a
+14	46	6739611975395364	C:/Users/91oso/Documents/GitHub/H-gskolan-i-Halmstad/DAT-Labs/Lab3_1/Debug/Exe/Lab3_1.out	e8d320b40fd21c82
+0	12	6739613176717241	C:/Users/91oso/Documents/GitHub/H-gskolan-i-Halmstad/DAT-Labs/Lab3_1/Debug/Obj/asm.o	60fe65f1d5ddda6a
+14	46	6739613177032296	C:/Users/91oso/Documents/GitHub/H-gskolan-i-Halmstad/DAT-Labs/Lab3_1/Debug/Exe/Lab3_1.out	e8d320b40fd21c82
+0	18	6739630483998203	C:/Users/91oso/Documents/GitHub/H-gskolan-i-Halmstad/DAT-Labs/Lab3_1/Debug/Obj/asm.o	60fe65f1d5ddda6a
+22	65	6739630484433279	C:/Users/91oso/Documents/GitHub/H-gskolan-i-Halmstad/DAT-Labs/Lab3_1/Debug/Exe/Lab3_1.out	e8d320b40fd21c82
+1	19	6739630674986659	C:/Users/91oso/Documents/GitHub/H-gskolan-i-Halmstad/DAT-Labs/Lab3_1/Debug/Obj/asm.o	60fe65f1d5ddda6a
+22	66	6739630675421735	C:/Users/91oso/Documents/GitHub/H-gskolan-i-Halmstad/DAT-Labs/Lab3_1/Debug/Exe/Lab3_1.out	e8d320b40fd21c82
