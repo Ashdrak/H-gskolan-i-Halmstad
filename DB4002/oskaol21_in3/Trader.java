@@ -1,11 +1,12 @@
 import java.io.*;
+import java.util.PriorityQueue;
 
 public class Trader extends Thread {
     DataBuffer<StockPick> stockPicks;
     // Fler intstansvariabler?
-
-    int nrPicks; // nr of stock picks for printing to log-file each second
-    int endTime; // time to run in seconds
+    MaxPQ prioQueue;
+    int nrPicks; //antal stockPicks som skall printas i log filen varje sekund
+    int endTime; //tid i sekunder
 
     public Trader(DataBuffer<StockPick> stockPicks,
             int bufferSize, int nrPicks, int endTime) {
@@ -31,19 +32,30 @@ public class Trader extends Thread {
             }
 
             /*
-             * LÃ¤gg till kod hÃ¤r.
+             * Lägg till kod här.
              * 
-             * 1: TÃ¶m stockPicks och lÃ¤gg elementen i en tom priortietskÃ¶.
-             * Denna prioritetskÃ¶ kan t.ex. vara en instansvariabel och initieras i
-             * konstruktorn.
-             * 
-             * 2: Ta de nrPicks stÃ¶rsta elementen frÃ¥n prioritetskÃ¶n och skriv
+             * 1: Töm stockPicks och lägg elementen i en tom priortietskö.
+             * Denna prioritetskö kan t.ex. vara en instansvariabel och initieras i
+               konstruktorn.*/
+              
+            for(int i = 0; i < stockPicks.size; i++){
+                prioQueue.insert(stockPicks.dequeue());
+            }
+
+             /* 2: Ta de nrPicks största elementen från prioritetskön och skriv
              * ut dessa i prioritetsordning sist i log.txt. Ni ska inte skriva
-             * Ã¶ver det som finns i filen utan lÃ¤gga till pÃ¥ slutet.
+             * över det som finns i filen utan lägga till på slutet.
              */
 
             try (OutputStreamWriter dataOut = new OutputStreamWriter(new FileOutputStream("log.txt", true))) {
                 
+                for(int i = 0; i < nrPicks; i++){
+                    dataOut.append("\n" + prioQueue.delMax().toString());
+                }
+
+                dataOut.append("\n");
+                dataOut.close();
+
             } catch (IOException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();

@@ -5,22 +5,31 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\Debug\Obj\startup_sam3x.o</file>
-            <file>$PROJ_DIR$\..\startup_sam3x.s</file>
-            <file>$PROJ_DIR$\Debug\Exe\Lab1_BCD.out</file>
             <file>$PROJ_DIR$\Debug\Obj\asm.o.rsp</file>
+            <file>$PROJ_DIR$\..\startup_sam3x.s</file>
             <file>$TOOLKIT_DIR$\config\linker\Microchip\sam3x8\sram.icf</file>
             <file>$PROJ_DIR$\asm.s</file>
-            <file>$PROJ_DIR$\Debug\Obj\asm.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\startup_sam3x.o.rsp</file>
+            <file>$PROJ_DIR$\Debug\Obj\startup_sam3x.o</file>
+            <file>$PROJ_DIR$\Debug\Exe\Lab1_BCD.out</file>
             <file>$PROJ_DIR$\Debug\List\Lab1_BCD.map</file>
+            <file>$PROJ_DIR$\Debug\Obj\startup_sam3x.o.rsp</file>
+            <file>$PROJ_DIR$\Debug\Obj\asm.o</file>
         </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 6 5</file>
+                </tool>
+            </outputs>
+        </file>
         <file>
             <name>$PROJ_DIR$\..\startup_sam3x.s</name>
             <outputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 0</file>
+                    <file> 4</file>
                 </tool>
             </outputs>
             <inputs>
@@ -31,43 +40,34 @@
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\Debug\Exe\Lab1_BCD.out</name>
+            <name>$PROJ_DIR$\asm.s</name>
             <outputs>
                 <tool>
-                    <name>ILINK</name>
+                    <name>AARM</name>
                     <file> 8</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
-                    <name>ILINK</name>
-                    <file> 4 6 0</file>
+                    <name>AARM</name>
+                    <file> 0</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\asm.s</name>
+            <name>$PROJ_DIR$\Debug\Exe\Lab1_BCD.out</name>
             <outputs>
                 <tool>
-                    <name>AARM</name>
+                    <name>ILINK</name>
                     <file> 6</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
-                    <name>AARM</name>
-                    <file> 3</file>
+                    <name>ILINK</name>
+                    <file> 2 8 4</file>
                 </tool>
             </inputs>
-        </file>
-        <file>
-            <name>[ROOT_NODE]</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 8 2</file>
-                </tool>
-            </outputs>
         </file>
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>

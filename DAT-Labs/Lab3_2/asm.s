@@ -18,8 +18,10 @@ main
      MOV R3, #0x7FFFFFFF
         
 LOOP ADD R0, #0x1
+     CPSID I
      SUB R6, R0, R3
      CMP R6, #0x0
+     CPSIE I
      BLT LOOP
      CPSID I
 WAIT NOP

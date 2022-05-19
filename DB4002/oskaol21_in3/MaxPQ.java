@@ -61,7 +61,7 @@ public class MaxPQ<T extends Comparable<T>> implements Iterable<T> {
         size = n;         //updaterar size
         T[] temp_Arr = (T[]) new Comparable[n + 1]; //ny array med längden n + 1
 
-        for(int i = 0; i < n; i++){
+        for(int i = 0; i < n; i++){ //Lägg elementenen i arrayen a på platsen 1 till n i en array av längd n + 1
             temp_Arr[i + 1] =  a[i];
         }
         
@@ -69,8 +69,8 @@ public class MaxPQ<T extends Comparable<T>> implements Iterable<T> {
 
         System.out.println(Arrays.toString(this.a));
 
-        for(int i = n/2; i >= 1; i--){
-            this.sink(i);
+        for(int i = n/2; i >= 1; i--){ //itererar ifrån index n/2 framåt i arrays till vi kommer till plats 1
+            this.sink(i);              //varje iteration använder sin-funktionen för att få elemente att sjunka ner i arrayen
         }
         System.out.println(Arrays.toString(this.a));
         
